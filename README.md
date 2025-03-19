@@ -24,7 +24,7 @@ Vortex یک فریمورک قدرتمند و چابک Full-Stack است که ب�
 
 1. **کلون کردن مخزن**:
    ```bash
-   git clone https://github.com/yourusername/vortex.git
+   git clone https://github.com/valipour0212/vortex.git
    cd vortex
    ```
 

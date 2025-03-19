@@ -1,52 +1,55 @@
+# Vortex Framework
 
-# فریمورک Vortex
+Vortex is a powerful and agile Full-Stack framework designed for high performance, scalability, and security. Built
+using the Go programming language, its aim is to simplify the development of both frontend and backend systems, with a
+strong focus on speed and ease of use.
 
-Vortex یک فریمورک قدرتمند و چابک Full-Stack است که برای ارائه عملکرد بالا، مقیاس‌پذیری و امنیت طراحی شده است. این فریمورک با استفاده از زبان Golang ساخته شده و هدف آن ساده‌سازی توسعه سیستم‌های فرانت‌اند و بک‌اند است، در حالی که تمرکز زیادی بر سرعت و راحتی استفاده دارد.
+## Features
 
-## ویژگی‌ها
-- **عملکرد بالا**: بهینه‌سازی شده برای پردازش سریع داده‌ها و استفاده بهینه از منابع.
-- **مقیاس‌پذیری**: مقیاس‌پذیر برای مدیریت ترافیک بالا و پیچیدگی‌های در حال رشد اپلیکیشن.
-- **امنیت**: مکانیزم‌های امنیتی داخلی از جمله احراز هویت، مجوزدهی و رمزنگاری داده‌ها.
-- **Full-Stack**: قابلیت‌های توسعه هم برای فرانت‌اند و هم برای بک‌اند.
-- **آسان برای یادگیری**: API ساده و شهودی برای تسهیل توسعه.
-- **معماری ماژولار**: قابل گسترش و قابل تنظیم از طریق اجزای ماژولار.
+- **High Performance**: Optimized for fast data processing and efficient resource utilization.
+- **Scalability**: Scalable to manage high traffic and the growing complexity of applications.
+- **Security**: Built-in security mechanisms including authentication, authorization, and data encryption.
+- **Full-Stack**: Development capabilities for both frontend and backend.
+- **Easy to Learn**: Simple and intuitive API to facilitate development.
+- **Modular Architecture**: Expandable and customizable through modular components.
 
-## فهرست مطالب
-1. [نصب](#نصب)
-2. [شروع سریع](#شروع-سریع)
-3. [معماری](#معماری)
-4. [مشارکت](#مشارکت)
-5. [مجوز](#مجوز)
+## Table of Contents
 
-## نصب
+1. [Installation](#installation)
+2. [Quick Start](#quick-start)
+3. [Architecture](#architecture)
+4. [Contributing](#contributing)
+5. [License](#license)
 
-برای نصب و استفاده از فریمورک Vortex، مراحل زیر را دنبال کنید:
+## installation
 
-1. **کلون کردن مخزن**:
+To install and use the Vortex framework, follow these steps:
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/valipour0212/vortex.git
    cd vortex
    ```
 
-2. **نصب وابستگی‌ها**:
-   اطمینان حاصل کنید که Golang نصب شده است (نسخه 1.x یا بالاتر).
-   سپس برای نصب وابستگی‌های لازم، دستور زیر را اجرا کنید:
+2. **Install Dependencies**:  
+   Ensure that Golang is installed (version 1.x or higher).  
+   Then, run the following command to install the necessary dependencies:
    ```bash
    go mod tidy
    ```
 
-3. **اجرای برنامه**:
-   شما می‌توانید برنامه Vortex را با دستور زیر اجرا کنید:
+3. **Run the Application**:  
+   You can run the Vortex application using the following command:
    ```bash
    go run main.go
    ```
 
-## شروع سریع
+## quick-start
 
-برای شروع کار با Vortex، باید پروژه جدیدی ایجاد کنید. مراحل زیر را دنبال کنید:
+To get started with Vortex, you need to create a new project. Follow these steps:
 
-1. **ایجاد یک پروژه جدید Vortex**:
-   در داخل دایرکتوری روت فضای کاری خود، یک دایرکتوری پروژه جدید ایجاد کنید:
+1. **Create a New Vortex Project**:  
+   Inside the root directory of your workspace, create a new project directory:
    ```bash
    mkdir my-vortex-project
    cd my-vortex-project
@@ -58,37 +61,39 @@ Vortex یک فریمورک قدرتمند و چابک Full-Stack است که ب�
    vortex init
    ```
 
-3. **شروع به توسعه**:
-   با ویرایش فایل `main.go` یا دیگر فایل‌های ماژول بر اساس نیاز پروژه خود شروع کنید. می‌توانید اپلیکیشن خود را با سازماندهی آن به کنترلرها، مدل‌ها، نماها و مسیرها ساختاردهی کنید.
+3. **Start development**:
+   Start by editing the main.go file or other module files based on your project needs. You can structure your
+   application by organizing it into controllers, models, views, and routes.
 
-4. **ساخت و اجرای اپلیکیشن**:
-   برای شروع سرور، دستور زیر را اجرا کنید:
+4. **Build and run the application**:
+   To start the server, run the following command:
    ```bash
    go run main.go
    ```
 
-## معماری
+## architecture
 
-Vortex از معماری ماژولار پیروی می‌کند که به شما این امکان را می‌دهد که به راحتی اجزای جدید را ادغام کنید. فریمورک وظایف مختلف را به ماژول‌های زیر تقسیم می‌کند:
+Vortex follows a modular architecture that allows you to easily integrate new components. The framework divides various
+tasks into the following modules:
 
-- **هسته (Core)**: مدیریت مسیریابی، پردازش درخواست‌ها و عملکردهای پایه فریمورک.
-- **پایگاه داده (Database)**: ادغام آسان با پایگاه‌های داده مانند MySQL، PostgreSQL و MongoDB.
-- **امنیت (Security)**: پیاده‌سازی مکانیزم‌های احراز هویت و مجوز، از جمله پشتیبانی از JWT.
-- **API**: ایجاد API‌های RESTful با ابزارهای داخلی برای اعتبارسنجی درخواست‌ها و فرمت‌دهی پاسخ‌ها.
-- **فرانت‌اند (Frontend)**: پشتیبانی از ساخت رابط‌های کاربری پویا و تعاملی با استفاده از فریمورک‌های جاوااسکریپت مدرن.
+- **Core**: Manages routing, request processing, and core framework functionalities.
+- **Database**: Easy integration with databases like MySQL, PostgreSQL, and MongoDB.
+- **Security**: Implements authentication and authorization mechanisms, including support for JWT.
+- **API**: Creates RESTful APIs with built-in tools for request validation and response formatting.
+- **Frontend**: Supports building dynamic and interactive user interfaces using modern JavaScript frameworks.
 
-## مشارکت
+## contributing
 
-مشارکت‌ها خوش‌آمد هستند! برای مشارکت در فریمورک Vortex:
+Contributions are welcome! To contribute to the Vortex framework:
 
-1. مخزن را Fork کنید.
-2. یک شاخه جدید ایجاد کنید (`git checkout -b feature-name`).
-3. تغییرات خود را ایجاد کرده و commit کنید (`git commit -am 'Add new feature'`).
-4. تغییرات را به شاخه خود push کنید (`git push origin feature-name`).
-5. یک pull request ایجاد کنید.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push your changes to your branch (`git push origin feature-name`).
+5. Create a pull request.
 
-لطفاً اطمینان حاصل کنید که کد شما با استانداردهای کدنویسی مطابقت دارد و شامل تست‌های مناسب است.
+Please make sure your code adheres to the coding standards and includes appropriate tests.
 
-## مجوز
+## license
 
-این پروژه تحت مجوز MIT منتشر شده است - برای جزئیات بیشتر به فایل [LICENSE](LICENSE) مراجعه کنید.
+This project is licensed under the MIT License - for more details, please refer to the [LICENSE](LICENSE) file.

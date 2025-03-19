@@ -55,9 +55,9 @@ To get started with Vortex, you need to create a new project. Follow these steps
    cd my-vortex-project
    ```
 
-2. **راه‌اندازی ساختار پروژه**:
-   از ابزار scaffolding Vortex برای ایجاد ساختار پیش‌فرض پروژه استفاده کنید:
-   ```bash
+2. **Setting up the project structure**:
+   Use the Vortex scaffolding tool to create the default project structure:
+3. ```bash
    vortex init
    ```
 
